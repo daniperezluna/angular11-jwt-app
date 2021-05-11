@@ -13,13 +13,15 @@ export class BasicAuthHtppInterceptorService implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     if (sessionStorage.getItem('token')) {
-      req = req.clone({
-        setHeaders: {
-          Authorization: sessionStorage.getItem('token')
-        }
+      const cloned = req.clone({
+        headers: req.headers.set(
+          'Authorization',
+          sessionStorage.getItem('token')
+        )
       });
+      return next.handle(cloned);
+    } else {
+      return next.handle(req);
     }
-
-    return next.handle(req);
   }
 }

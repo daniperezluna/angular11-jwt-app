@@ -68,16 +68,9 @@ export class FakeBackendHttpInterceptor implements HttpInterceptor {
   }
 
   checkUserRole({ email, password }) {
-    if (email === 'admin@company.com' && password === 'admin') {
-      return this._users[0];
-    } else if (email === 'user@company.com' && password === 'user') {
-      return this._users[1];
-    } else if (
-      email === 'superadmin@company.com' &&
-      password === 'superadmin'
-    ) {
-      return this._users[2];
-    }
-    return null;
+    const user = this._users.find(
+      u => u.email === email && u.password === password
+    );
+    return user;
   }
 }
