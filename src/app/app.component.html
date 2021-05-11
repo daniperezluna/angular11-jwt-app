@@ -1,0 +1,16 @@
+<app-header (sidenavToggle)="sidenavToggle()"></app-header>
+<mat-sidenav-container autosize>
+  <mat-sidenav #sidenav *ngIf="authenticationService.isUserLoggedIn()" [(opened)]="opened" mode="over" role="navigation">
+    <mat-nav-list>
+      <a mat-list-item (click)="sidenavToggle()" routerLink="/" class="nav-link">View Employees</a>
+      <a mat-list-item
+        *ngIf="authenticationService.userRole() !== 'ROLE_BASIC'"
+        (click)="sidenavToggle()"
+        routerLink="/addemployee" class="nav-link">Add New Employee</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
