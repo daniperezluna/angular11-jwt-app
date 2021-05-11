@@ -1,23 +1,31 @@
 [
    {
-    "email": "admin@company.com",
-    "name": "John Doe",
-    "role": "ROLE_ADMIN",
-    "permissions": ["user.add"],
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGNvbXBhbnkuY29tIiwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6IlJPTEVfQURNSU4iLCJwZXJtaXNzaW9ucyI6WyJ1c2VyLmFkZCJdfQ.cmd8xRHEi_-qfowIT_qMBvJezL9igwl6nenmYlj7xFk"
-  },
-  {
-    "email": "user@company.com",
-    "name": "John Smith",
-    "role": "ROLE_BASIC",
-    "permissions": "",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAY29tcGFueS5jb20iLCJuYW1lIjoiSm9obiBTbWl0aCIsInJvbGUiOiJST0xFX0JBU0lDIiwicGVybWlzc2lvbnMiOiIifQ.q-EKEwHqjxEsQK2G9e8r-K04Hl1OffWb3IWPKKw9m1E"
-  },
-  {
-    "email": "superadmin@company.com",
-    "name": "John Super",
-    "role": "ROLE_SUPER_ADMIN",
-    "permissions": ["user.add", "user.delete"],
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AY29tcGFueS5jb20iLCJuYW1lIjoiSm9obiBTdXBlciIsInJvbGUiOiJST0xFX1NVUEVSX0FETUlOIiwicGVybWlzc2lvbnMiOlsidXNlci5hZGQiLCJ1c2VyLmRlbGV0ZSJdfQ.HzBJp6GtyaNT8NoUms3Agl1LyAcKWSNmixBhgWEPtoM"
-  }     
+      "email":"admin@company.com",
+      "name":"John Doe",
+      "role":"ROLE_ADMIN",
+      "permissions":[
+         "user.add"
+      ],
+      "password":"admin",
+      "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGNvbXBhbnkuY29tIiwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6IlJPTEVfQURNSU4iLCJwZXJtaXNzaW9ucyI6WyJ1c2VyLmFkZCJdfQ.cmd8xRHEi_-qfowIT_qMBvJezL9igwl6nenmYlj7xFk"
+   },
+   {
+      "email":"user@company.com",
+      "name":"John Smith",
+      "role":"ROLE_BASIC",
+      "permissions":"",
+      "password":"user",
+      "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAY29tcGFueS5jb20iLCJuYW1lIjoiSm9obiBTbWl0aCIsInJvbGUiOiJST0xFX0JBU0lDIiwicGVybWlzc2lvbnMiOiIifQ.q-EKEwHqjxEsQK2G9e8r-K04Hl1OffWb3IWPKKw9m1E"
+   },
+   {
+      "email":"superadmin@company.com",
+      "name":"John Super",
+      "role":"ROLE_SUPER_ADMIN",
+      "permissions":[
+         "user.add",
+         "user.delete"
+      ],
+      "password":"superadmin",
+      "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AY29tcGFueS5jb20iLCJuYW1lIjoiSm9obiBTdXBlciIsInJvbGUiOiJST0xFX1NVUEVSX0FETUlOIiwicGVybWlzc2lvbnMiOlsidXNlci5hZGQiLCJ1c2VyLmRlbGV0ZSJdfQ.HzBJp6GtyaNT8NoUms3Agl1LyAcKWSNmixBhgWEPtoM"
+   }
 ]
