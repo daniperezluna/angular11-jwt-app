@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../service/authentication.service';
+import { AuthService } from '../oidc-service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private loginservice: AuthenticationService
+    private loginservice: AuthenticationService,
+    private oAuthService: AuthService
   ) {
     this.form = this.fb.group({
       email: ['', Validators.email],
@@ -43,5 +45,9 @@ export class LoginComponent implements OnInit {
         }
       );
     }
+  }
+
+  loginOpenID() {
+    this.oAuthService.login();
   }
 }

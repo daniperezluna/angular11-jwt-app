@@ -17,6 +17,7 @@
     "@types/jasmine": "^3.7.1",
     "@types/jasminewd2": "^2.0.9",
     "@types/node": "^15.0.2",
+    "angular-oauth2-oidc": "^10.0.3",
     "hammerjs": "^2.0.8",
     "rxjs": "^7.0.0",
     "tslib": "^2.2.0",

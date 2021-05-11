@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BasicAuthHtppInterceptorService } from './service/basic-auth-interceptor.service';
 import { FakeBackendHttpInterceptor } from './service/fake-backend-interceptor.service';
 import { AdminBoardComponent } from './admin-board/admin-board.component';
+import { CoreModule } from './oidc-service/oidc.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AdminBoardComponent } from './admin-board/admin-board.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    CoreModule.forRoot()
   ],
   providers: [
     {

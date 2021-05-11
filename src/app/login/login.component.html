@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-content>
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <form [formGroup]="form" (ngSubmit)="onSubmit">
       <h2>Log In</h2>
       <mat-form-field class="full-width-input">
         <input matInput placeholder="Email" formControlName="email" required>
@@ -20,4 +20,7 @@
       <button mat-raised-button type="submit" color="primary">Login</button>
     </form>
   </mat-card-content>
+  <mat-card-footer>
+    <button mat-raised-button (click)="loginOpenID()" color="primary">Login with OpenID</button>
+  </mat-card-footer>
 </mat-card>
