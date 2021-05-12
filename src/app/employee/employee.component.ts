@@ -32,8 +32,8 @@ export class EmployeeComponent implements OnInit {
   }
 
   hasUserPermissionToDelete(): boolean {
-    return this.authenticationService.userPermissions() ?
+    return this.authenticationService.userPermissions(); /*?
       this.authenticationService.userPermissions().includes('user.delete') :
-      false; 
+      false;*/ 
   }
 }

@@ -1,12 +1,12 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <button mat-icon-button *ngIf="loginService.isUserLoggedIn()" (click)="toggle()">
+    <button mat-icon-button (click)="toggle()">
       <mat-icon>menu</mat-icon>
     </button>
     <span>Angular JWT App</span>
     <div fxFlex fxLayout fxLayoutAlign="flex-end">
-      <span> {{loginService.getUserName()}} </span>
-      <button *ngIf="loginService.isUserLoggedIn()" mat-icon-button routerLink="/logout">
+      <span> </span>
+      <button mat-icon-button (click)="logout()">
         <mat-icon> exit_to_app </mat-icon> 
       </button>
     </div>

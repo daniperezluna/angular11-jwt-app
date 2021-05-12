@@ -43,7 +43,8 @@ export class AuthenticationService {
   }
 
   userPermissions() {
-    return sessionStorage.getItem('permissions').split(',');
+    // return sessionStorage.getItem('permissions').split(',');
+    return true;
   }
 
   logOut() {

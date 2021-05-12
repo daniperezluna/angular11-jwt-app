@@ -11,18 +11,15 @@ import { AdminBoardComponent } from './admin-board/admin-board.component';
 const routes: Routes = [
   {
     path: '',
-    component: EmployeeComponent,
-    canActivate: [AuthGuardService]
+    component: EmployeeComponent
   },
   {
     path: 'addemployee',
-    component: AddEmployeeComponent,
-    canActivate: [AuthGuardService]
+    component: AddEmployeeComponent
   },
   {
     path: 'adminBoard',
-    component: AdminBoardComponent,
-    canActivate: [AuthGuardService, RoleGuardService]
+    component: AdminBoardComponent
   },
   {
     path: 'login',
@@ -30,8 +27,7 @@ const routes: Routes = [
   },
   {
     path: 'logout',
-    component: LogoutComponent,
-    canActivate: [AuthGuardService]
+    component: LogoutComponent
   },
   { path: '**', redirectTo: 'login' }
 ];
